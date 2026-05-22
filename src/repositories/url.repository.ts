@@ -21,7 +21,7 @@ export class UrlRepository {
         return await url.save();
     }
 
-    async findByShortUrl(shortUrl: string) {
+    async findByShortUrl(shortUrl: string): Promise<IUrl | null> {
         return await Url.findOne({ shortUrl });
     }
 

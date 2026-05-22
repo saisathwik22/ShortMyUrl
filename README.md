@@ -29,3 +29,32 @@ echo PORT=3000 >> .env
 ```
 npm run dev
 ```
+
+
+
+
+create short url
+
+- In postman, hit this endpoint (POST)
+
+```
+http://localhost:7777/trpc/url.create
+{
+    "originalUrl": "any url"
+}
+```
+
+
+Get original url
+
+- hit this endpoint (GET)
+
+```
+http://localhost:7777/trpc/url.getOriginalUrl?input={"shortUrl": "<shortUrl id generated>"}
+```
+
+redirect url
+
+```
+http://localhost:7777/shortUrl
+```
